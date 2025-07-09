@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claim Your $750 Walmart Gift Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .container {
+      background: white;
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #0071ce;
+    }
+    .btn {
+      background: #0071ce;
+      color: white;
+      padding: 15px 25px;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    .comments {
+      text-align: left;
+      margin-top: 30px;
+    }
+    .comment {
+      background: #f9f9f9;
+      padding: 10px;
+      border-left: 3px solid #0071ce;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    .countdown {
+      font-size: 20px;
+      color: red;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎁 Claim Your $750 Walmart Gift Card!</h1>
+    <p>Answer a few questions to check your eligibility.</p>
+    <div class="countdown">Offer expires in: <span id="timer">03:59</span></div>
+    <a class="btn" href="" target="_blank">CLAIM NOW</a>
+
+    <div class="comments">
+      <h3>What others are saying:</h3>
+      <div class="comment">💬 Jenny T: “Just got mine! Took 2 minutes, no BS.”</div>
+      <div class="comment">💬 Mark R: “I thought it was fake but it's real!”</div>
+      <div class="comment">💬 Sarah P: “Thanks so much! Got my $750 instantly.”</div>
+    </div>
+  </div>
+
+  <script>
+    // Countdown timer
+    let time = 239;
+    const timerElement = document.getElementById('timer');
+    const countdown = setInterval(() => {
+      const minutes = Math.floor(time / 60);
+      const seconds = time % 60;
+      timerElement.textContent = \`\${String(minutes).padStart(2, '0')}:\${String(seconds).padStart(2, '0')}\`;
+      if (--time < 0) clearInterval(countdown);
+    }, 1000);
+  </script>
+  <p>Offer expires in: <span id="timer">05:00</span></p>
+
+<script>
+  let timeLeft = 300; // 5 minutes = 300 seconds
+
+  const timerDisplay = document.getElementById("timer");
+
+  const countdown = setInterval(() => {
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+
+    timerDisplay.textContent = 
+      `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+    timeLeft--;
+
+    if (timeLeft < 0) {
+      clearInterval(countdown);
+      timerDisplay.textContent = "00:00";
+    }
+  }, 1000);
+</script>
+
+</body>
+</html>
